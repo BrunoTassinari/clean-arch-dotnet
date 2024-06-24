@@ -47,6 +47,8 @@ namespace CleanArchDotnet.Domain.Entities
 
             DomainExceptionValidation.When(price < 0, "Invalid price. Price must be greater than zero");
 
+            DomainExceptionValidation.When(stock < 0, "Invalid stock. Stock must be greater than zero");
+
             DomainExceptionValidation.When(string.IsNullOrEmpty(image), "Invalid image. Image is required");
         }
     }
